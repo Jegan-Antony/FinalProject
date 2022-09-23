@@ -1,0 +1,50 @@
+h3 span{
+	font: size 27px;
+  align-items: center;
+  color: whitesmoke;
+
+}
+h3 input.search-input{
+	width:300px;
+	margin-left:auto;
+	float:right;
+
+}
+h5 {
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-weight: bolder;
+}
+.mt32{
+	margin-top: 80px;
+  background-color: transparent;
+  opacity: 1;
+  border-radius: 15px;
+  width: 30.5cm;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contain{
+  background-image: url('C:/Angular/BloodBank/src/assets/newHospital.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 105%;
+
+}
+.btn1{
+  background-color: white;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  border-color: red;
+  border-radius: 7px;
+}
+
+.btn2{
+  background-color: red;
+  width: auto;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  border-color: red;
+  border-radius: 7px;
+}
+

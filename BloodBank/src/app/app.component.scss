@@ -1,0 +1,85 @@
+.footer {
+  position: relative;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: rgb(106, 70, 235);
+  font-weight: 900;
+  text-align: center;
+}
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: rgb(245, 245, 248);
+  font-weight: 900;
+  text-align: center;
+}
+
+.toolbar img {
+  margin: 0 15px;
+}
+.toolbar button{
+  margin: 0px 50px;
+}
+.spacer {
+  flex: 1;
+}
+
+
+.terminal {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+  margin: 80px auto 0px 0px;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 80px 0px auto;
+  background-color: transparent;
+}
+
+
+
+.rainbow{
+  background-color: #343A40;
+  border-radius: 4px;
+  border-color: red;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px 16px;
+
+}
+
+
+.rainbow-2:hover{
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  animation:slidebg 2s linear infinite;
+}
+
+.rainbow-3:hover{
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, red);
+  animation:slidebg 2s linear infinite;
+}
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+

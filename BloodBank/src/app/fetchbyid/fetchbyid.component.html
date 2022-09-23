@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="contain">
+  <h3><span><br>Donor Details</span>
+
+   <form (ngSubmit)="fetch()" name="donor">
+      <div class="wrap">
+        <div class="search">
+          <input type="number" class="searchTerm" [(ngModel)]="donor.donorId"
+            name="donorId"
+            placeholder="Enter Donor ID"
+            required #donorId="ngModel" >
+
+          <button type="submit" class="searchButton"> <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </h3>
+      <table class="table table-striped mt32">
+        <thead>
+          <tr>
+            <th scope="col">Donor Id</th>
+            <th scope="col">Donor Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Address</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Contact No</th>
+            <th scope="col">Blood Group</th>
+            <th scope="col">Registered Date</th>
+          </tr>
+        </thead>
+        <tbody id="tab">
+          <tr *ngIf="donor">
+            <td><b>{{donor.donorId}}</b></td>
+            <td><b>{{donor.donorName}}</b></td>
+            <td><b>{{donor.gender}}</b></td>
+            <td><b>{{donor.dateOfBirth}}</b></td>
+            <td><b>{{donor.address}}</b></td>
+            <td><b>{{donor.pincode}}</b></td>
+            <td><b>{{donor.contactNumber}}</b></td>
+            <td><b>{{donor.bloodGroup}}</b></td>
+            <td><b>{{donor.registeredDate}}</b></td>
+          </tr>
+        </tbody>
+    </table>
+    <h3 style="color: red; text-align: center;">{{result}}</h3>
+  </div>

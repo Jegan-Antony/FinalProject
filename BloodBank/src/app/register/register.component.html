@@ -1,0 +1,83 @@
+<div class="wrapper">
+  <div class="image-holder">
+
+  </div>
+
+
+  <div class="form-inner">
+    <form (ngSubmit)="submit(); register.reset()" name="donor" #register="ngForm">
+        <div class="form-header">
+         <h3><b>Donor Registration Form</b></h3>
+        </div>
+        <div class="form-group">
+          <label for="donorName"><b>Donor Name :</b></label>
+          <input type="text" class="form-control" id="donorName" name="donorName"
+          [(ngModel)]="donor.donorName" required #donorName="ngModel" minlength="3" maxlength="15"
+          pattern="^[a-zA-Z ]+$">
+          <div [hidden]="donorName.value || donorName.pristine" class="alert alert-danger">*Donor Name is required</div>
+          <div *ngIf="donorName.invalid" class="alert">
+            <div *ngIf="donorName.errors?.['minlength']" class="alert alert-danger">
+              *Name must be at least 3 characters
+            </div>
+            <div *ngIf="donorName.errors?.['pattern']" class="alert alert-danger">
+              *Name must contains only Characters
+            </div>
+          </div>
+        </div>
+
+
+          <label for="gender"><b>Gender :</b></label><span style="margin-left: 30px;"></span>
+          <input type="radio" value="Male" id="gender" name='gender' [(ngModel)]="donor.gender" required
+          #gender="ngModel">Male<span style="margin-left: 30px;"></span>
+          <input type="radio" value="Female" id="gender" name='gender' [(ngModel)]="donor.gender" required
+          #gender="ngModel">Female<br>
+
+        <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">*Gender is required</div>
+
+        <div class="form-group">
+          <label for="dateOfBirth"><b>Date Of Birth :</b></label>
+          <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth"
+          [(ngModel)]="donor.dateOfBirth" required #dateOfBirth="ngModel">
+        </div>
+        <div [hidden]="dateOfBirth.valid || dateOfBirth.pristine" class="alert alert-danger">*Date Of Birth is required</div>
+
+        <div class="form-group">
+          <label  for="address"><b>Address :</b></label>
+          <input type="text" class="form-control" id="address" name="address" [(ngModel)]="donor.address"
+          required #address="ngModel">
+        </div>
+        <div [hidden]="address.valid || address.pristine" class="alert alert-danger">*Address is required</div>
+
+        <div class="form-group">
+          <label for="pincode"><b>Pincode :</b></label>
+          <input type="number" class="form-control" id="pincode" name="pincode" [(ngModel)]="donor.pincode"
+          required #pincode="ngModel">
+        </div>
+        <div [hidden]="pincode.valid || pincode.pristine" class="alert alert-danger">*Pincode is required</div>
+
+        <div class="form-group">
+          <label for="contactNumber"><b>Contact Number :</b></label>
+          <input type="number" class="form-control" id="contactNumber" name="contactNumber"
+          [(ngModel)]="donor.contactNumber" required #contactNumber="ngModel" pattern="^[0-9]{10}$">
+        </div>
+        <div [hidden]="contactNumber.value ||contactNumber.pristine"  class="alert alert-danger">*Mobile Number is required</div>
+        <div *ngIf="contactNumber.invalid" class="alert">
+          <div *ngIf="contactNumber.errors?.['pattern']" class="alert alert-danger">
+            *Mobile Number must be valid
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="bloodGroup"><b>Blood Group :</b></label>
+          <select id="bloodGroup"  class="form-control" name="bloodGroup" [(ngModel)]="donor.bloodGroup"
+          required #bloodGroup="ngModel">
+            <option *ngFor="let group of bloodGroupName"  [value]="group">{{group}}</option>
+          </select>
+        </div>
+        <div [hidden]="bloodGroup.valid ||bloodGroup.pristine" class="alert alert-danger">*Blood Group is required</div>
+
+      <button type="submit" [disabled]="register.invalid">Register</button>
+    </form>
+  </div>
+
+</div>

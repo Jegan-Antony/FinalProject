@@ -1,0 +1,43 @@
+
+
+  <div class="toolbar" role="banner">
+    <img width="500" src="assets\title.png" />
+
+      <div class="spacer">
+        <div fxLayoutAlign="center center">
+
+
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option1" routerLinkActive="active" [routerLink]="['/register']" autocomplete="off">New Donor
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" routerLinkActive="active" [routerLink]="['/fetchalldonor']" autocomplete="off"> Donor Details
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option3" routerLinkActive="active" [routerLink]="['/fetchbyid']" autocomplete="off"> Search
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option4" routerLinkActive="active" [routerLink]="['/aboutus']" autocomplete="off"> Contact Us
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+      <button class="rainbow rainbow-2" routerLinkActive="active" [routerLink]="['/home']">Home</button>
+
+
+  </div>
+
+
+<div class="terminal">
+  <router-outlet>
+
+  </router-outlet>
+</div>
+<div class="footer">
+  <div class="spacer">
+    Email: redwaterbloodbank@gmail.com
+    , Mobile.No: 9658742135
+  </div></div>

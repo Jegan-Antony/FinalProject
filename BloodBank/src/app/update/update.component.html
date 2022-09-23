@@ -1,0 +1,58 @@
+<div class="contain">
+
+    <div class="login-box">
+
+    <form #updateForm="ngForm" name="donor" (ngSubmit)="update(updateForm.value); updateForm.reset() ">
+      <h2 style="font-style: italic; ">Update Donor Details</h2>
+
+  <div class="user-box">
+   <input type="number" [(ngModel)]="donor.donorId" id="donorId" name="donorId"
+        required #donorId="ngModel" [disabled]="donorId.value">
+        <label for="donorId">Donor ID</label>
+      </div>
+
+
+      <div class="user-box">
+        <input type="text" [(ngModel)]="donor.donorName"  id="donorName" name="donorName" required>
+        <label for="name">Name</label>
+      </div>
+        <br>
+
+        <h4 style="color: white; font-family: 'Times New Roman', Times, serif;"><label for="gender" style="color: red; font-weight: bold;" >Gender</label>
+          <span style="margin-left: 137px;"></span>
+        <input type="radio" value="Male" id="gender" name='gender' [(ngModel)]="donor.gender" required>
+        Male<span style="margin-left: 30px;"></span>
+        <input type="radio" value="Female" id="gender" name='gender' [(ngModel)]="donor.gender" required>
+        Female</h4>
+
+
+      <div class="user-box">
+        <input type="date" id="dateOfBirth" name="dateOfBirth"
+               [(ngModel)]="donor.dateOfBirth" required>
+               <label for="dateOfBirth">Date Of Birth</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="address" name="address" [(ngModel)]="donor.address" required>
+        <label  for="address">Address</label>
+      </div>
+      <div class="user-box">
+        <input type="number" id="pincode" name="pincode" [(ngModel)]="donor.pincode" required>
+        <label for="pincode">Pincode</label>
+      </div>
+      <div class="user-box">
+        <input type="number" [(ngModel)]="donor.contactNumber" id="contactNumber" name="contactNumber"
+         required>
+        <label for="contactNumber">Contact Number</label>
+      </div>
+
+
+      <button type="submit" [disabled]="updateForm.invalid">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Save Changes
+      </button>
+    </form>
+  </div>
+</div>

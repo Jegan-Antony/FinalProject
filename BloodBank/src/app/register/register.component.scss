@@ -1,0 +1,201 @@
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Muli-Regular";
+  font-size: 15px;
+  margin: 0;
+  color: #fff; }
+
+input, textarea, select, button {
+  font-family: "Muli-SemiBold"; }
+
+.container{
+    float: left;
+    margin: 5px;
+}
+.right{
+    float: left;
+    margin: 10px;
+    color: blue;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0; }
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0; }
+
+a {
+  text-decoration: none; }
+
+:focus {
+  outline: none; }
+
+.wrapper {
+  min-height: 100vh;
+  display: flex; }
+  .wrapper .image-holder {
+    width: 99.9%; }
+  .wrapper .form-inner {
+    width: 50.1%; }
+
+.image-holder {
+
+  background-image: url('C:/Angular/BloodBank/src/assets/registration-form-8.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; }
+.image-holder img {
+  display: none; }
+
+.form-inner {
+  background: #ff97a4;
+  padding-top: 5.36vh;
+  padding-left: 4vw;
+  padding-right: 4vw; }
+
+form {
+  width: 100%; }
+
+.form-header {
+  text-align: center;
+  margin-bottom: 10px;
+margin-top: 10px; }
+
+h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "ChelseaMarket-Regular"; }
+
+
+
+.form-group {
+  margin-bottom: 5px;
+  position: relative; }
+
+.form-control {
+  border: 1px solid #f3ecec80;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: none;
+  padding: 0 19px;
+  color: rgb(165, 11, 11);
+  font-size: 17px; }
+
+button {
+  border: none;
+  width: 80%;
+  height: 38px;
+  border-radius: 22.5px;
+  margin: auto;
+  margin-top: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #fff;
+  color: #ff97a4;
+  text-transform: uppercase;
+  font-size: 17px;
+  overflow: hidden;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+  button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fd677a;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  button:hover {
+    color: white; }
+    button:hover:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+
+
+
+
+@media (max-width: 1500px) {
+  .form-inner {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-left: 4vw;
+    padding-right: 4vw; } }
+@media (max-width: 1199px) {
+  .wrapper {
+    flex-direction: column; }
+    .wrapper .image-holder {
+      width: 100%;
+      height: 45vh; }
+    .wrapper .form-inner {
+      width: 100%;
+      height: 55vh; }
+
+  .form-inner {
+    padding-left: 20vw;
+    padding-right: 20vw; }
+
+  button {
+    width: 50%; } }
+@media (max-width: 991px) {
+  .wrapper .image-holder {
+    height: 37vh; }
+  .wrapper .form-inner {
+    height: 63vh; }
+
+  .form-header {
+    margin-bottom: 30px; } }
+@media (max-width: 767px) {
+  .wrapper .form-inner {
+    height: auto; }
+  .wrapper .image-holder {
+    height: auto; }
+
+  .image-holder img {
+    display: block; }
+
+  .form-inner {
+    padding: 30px 20px; }
+
+  button {
+    width: 100%; } }
+
+    .ng-valid[required], .ng-valid.required  {
+      border-left: 1px solid #42A948; /* green */
+      border-color: #42A948;
+
+    }
+
+    .ng-invalid:not(form)  {
+      border-left: 1px solid #a94442; /* red */
+      border-color: #a94442;
+    }

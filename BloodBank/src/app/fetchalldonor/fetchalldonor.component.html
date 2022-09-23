@@ -1,0 +1,37 @@
+
+<div class="contain">
+  <div class="container">
+
+    <table class="table table-striped mt32">
+      <thead>
+        <tr>
+          <th><h5>Donor Id</h5></th>
+          <th><h5>Donor Name</h5></th>
+          <th><h5>Gender</h5></th>
+          <th><h5>Date Of Birth</h5></th>
+          <th><h5>Address</h5></th>
+          <th><h5>Pincode</h5></th>
+          <th><h5>Contact No</h5></th>
+          <th><h5>Blood Group</h5></th>
+          <th><h5>Action</h5></th>
+        </tr>
+      </thead>
+      <tbody id="tab">
+        <tr *ngFor="let d of donorList">
+          <td><b>{{d.donorId}}</b></td>
+          <td><b>{{d.donorName}}</b></td>
+          <td><b>{{d.gender}}</b></td>
+          <td><b>{{d.dateOfBirth}}</b></td>
+          <td><b>{{d.address}}</b></td>
+          <td><b>{{d.pincode}}</b></td>
+          <td><b>{{d.contactNumber}}</b></td>
+          <td><b>{{d.bloodGroup}}</b></td>
+          <td><button class="btn1" routerLink="/update/{{d.donorId}}" (click)="currentData(d.donorId)">EDIT</button>
+           <button class="btn2" (click)="deleteData(d.donorId)">Delete</button>  </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
